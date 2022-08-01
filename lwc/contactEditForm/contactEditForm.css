@@ -1,0 +1,21 @@
+.header {
+   /* font-weight: bold; */
+   color:#a7a7a7e3;
+}
+
+.form-label-container{
+   display: flex;
+   justify-content: flex-start;
+   margin-top: 10px;
+}
+
+.obligatory-sign{
+   color: red;
+}
+
+.form-label{
+   font-weight: 600;
+}
+
+
+

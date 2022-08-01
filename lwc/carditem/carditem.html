@@ -1,0 +1,17 @@
+<template>
+    <div class="container" onclick={contactClick}>
+            <div class="contact-card">
+                <img src={logoURL} alt="profile avatar" class="avatar">
+                <p class="contact-card-owner">{product.Name}</p>
+            </div>
+            <div class="slds-text-title contact-card-details">
+                <p class="contact-card-details-item">E-mail: {product.Email}</p>
+                <p>Tel: {product.Phone}</p>
+            </div>
+    </div>
+    
+    <template if:true={openmodel}>
+        <c-contact-edit-form onclosemodalvalue={handleCloseModal} oncardvalues={handleCardValues} contactid = {product.Id}>
+        </c-contact-edit-form>
+    </template>
+</template>

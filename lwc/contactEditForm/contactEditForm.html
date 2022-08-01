@@ -1,0 +1,81 @@
+<template>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                        onclick={handleCloseModal}>
+                        <lightning-icon icon-name="utility:close" size="medium">
+                        </lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Contact Edit Form</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-record-edit-form object-api-name={objectApiName} record-id={contactid} onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+                            <div class="slds-text-align_center">
+                                <label for="contactOwner"><span class="obligatory-sign">*</span>Owner ID</label>
+                                <lightning-input-field id="contactOwner" field-name="OwnerId" variant="label-hidden"> </lightning-input-field>
+                                <div class="slds-m-top_small slds-m-bottom_xx-small"><label for="contactPhone" class="slds-m-top_medium">Business Phone</label></div>
+                                <lightning-input-field id="contactPhone" field-name="Phone" variant="label-hidden"> </lightning-input-field>
+                                <div class="form-label-container">
+                                    <p class="form-label"><span class="obligatory-sign">*</span>Full Name</p>
+                                </div>
+                                <lightning-input-field field-name="Salutation"> </lightning-input-field>
+                                <lightning-input-field field-name="FirstName"> </lightning-input-field>
+                                <lightning-input-field field-name="LastName"> </lightning-input-field>
+                                <lightning-input-field field-name="HomePhone"> </lightning-input-field>
+                                <lightning-input-field field-name="AccountId"> </lightning-input-field>
+                                <lightning-input-field field-name="Mobile"> </lightning-input-field>
+                                <lightning-input-field field-name="Title"> </lightning-input-field>
+                                <lightning-input-field field-name="OtherPhone"> </lightning-input-field>
+                                <lightning-input-field field-name="Department"> </lightning-input-field>
+                                <label for="contactFax">Business Fax</label>
+                                <lightning-input-field id="contactFax" field-name="Fax" variant="label-hidden"> </lightning-input-field>
+                                <lightning-input-field field-name="Birthdate"> </lightning-input-field>
+                                <lightning-input-field field-name="Email"> </lightning-input-field>
+                                <lightning-input-field field-name="ReportsToId"> </lightning-input-field>
+                                <lightning-input-field field-name="AssistantName"> </lightning-input-field>
+                                <lightning-input-field field-name="LeadSource"> </lightning-input-field>
+                                <lightning-input-field field-name="AssistantPhone"> </lightning-input-field>
+                                <div class="form-label-container slds-m-left_xx-small">
+                                    <p class="form-label">Mailing Address</p>
+                                </div>
+                                <lightning-input-field field-name="MailingStreet"> </lightning-input-field>
+                                <lightning-input-field field-name="MailingCity"> </lightning-input-field>
+                                <lightning-input-field field-name="MailingState"> </lightning-input-field>
+                                <lightning-input-field field-name="MailingPostalCode"> </lightning-input-field>
+                                <lightning-input-field field-name="MailingCountry"> </lightning-input-field>
+                                <div class="form-label-container slds-m-left_xx-small">
+                                    <p class="form-label">Other Address</p>
+                                </div>
+                                <lightning-input-field field-name="OtherStreet"> </lightning-input-field>
+                                <lightning-input-field field-name="OtherCity"> </lightning-input-field>
+                                <lightning-input-field field-name="OtherState"> </lightning-input-field>
+                                <lightning-input-field field-name="OtherCountryCode"> </lightning-input-field>
+                                <lightning-input-field field-name="OtherCountry"> </lightning-input-field>
+                                <div class="form-label-container slds-m-left_xx-small">
+                                    <p class="form-label">Additional Information</p>
+                                </div>
+                                <lightning-input-field field-name="Languages__c"> </lightning-input-field>
+                                <lightning-input-field field-name="Level__c"> </lightning-input-field>
+                                <div class="form-label-container slds-m-left_xx-small">
+                                    <p class="form-label">Description Information</p>
+                                </div>
+                                <lightning-input-field field-name="Description"> </lightning-input-field>
+                            <footer class='slds-modal__footer'>
+                                <lightning-button class="slds-m-top_small slds-m-right_small" variant="neutral" type="text" name="Cancel"
+                                    label="Cancel" onclick={handleCloseModal}>
+                                </lightning-button>
+                                <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="Save" label="Save">
+                                </lightning-button>
+                            </footer>
+                            </div>
+                        </lightning-record-edit-form>
+                </div>
+            </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
+
